@@ -35,7 +35,7 @@ app.post('/mail', function (req, res) {
   let cleanUser = sanitizer.escape(req.body.user);
   let cleanMsg = sanitizer.escape(req.body.msg);
 
-  mailbox = "<span class='ugotmail'><b>" + cleanUser + ":</b> " + cleanMsg + "</span><br/>" + mailbox;
+  mailbox = "<span class='ugotmail'><b>" + cleanUser + ":</b> " + cleanMsg + "</span><br/><br/>" + mailbox;
 });
 
 http.listen(port, function(){
